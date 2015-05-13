@@ -3,13 +3,46 @@ body {
   width: 100vw;
   background-color: #bdc3c7;
   position: relative;
+  font-family: 'Open Sans', sans-serif;
+
+  .vcenter {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  #instructions {
+    background-color: #8e44ad;
+    border: 1px solid #8e44ad;
+    color: #ecf0f1;
+    width: 90vmin;
+    margin: 0 auto;
+    padding: 5vmin;
+    text-align: center;
+
+    p {
+      font-size: 1.5vmin;
+    }
+
+    a#start-game {
+      color: #ecf0f1;
+      border: 1px solid #ecf0f1;
+      border-radius: 4px;
+      display: inline-block;
+      padding: 1vmin 2vmin;
+      font-size: 2vmin;
+      text-decoration: none;
+      margin-top: 2vmin;
+
+      &:hover {
+        background-color: rgba(255, 255, 255, 0.1);
+      }
+    }
+  }
 
   #game {
     width: 90vmin;
     height: 95vmin;
-    position: relative;
-    top: 50%;
-    transform: translateY(-50%);
     margin: 0 auto;
   }
 

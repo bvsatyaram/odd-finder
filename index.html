@@ -1,8 +1,24 @@
 ---
 layout: default
 ---
-
-<div id="game">
+<div id="instructions" class="vcenter">
+    <h1>Odd Finder</h1>
+    <p>It's a 2 player game</p>
+    <p>
+        Action keys:<br>
+        Player 1 - Left Ctrl Key<br>
+        Player 2 - Right Key
+    </p>
+    <p>
+        All the emoticons are smileys initially. A sad emoticon intrudes occassionally.<br>
+        When you find it, hit your action key.
+    </p>
+    <p>Speed gains more points. So, be quick!</p>
+    <p>Wrong choice costs points. So, be careful.</p>
+    <p>Good luck!</p>
+    <a href="#" onclick="Game.startGame(); return false;" id="start-game">Start Game</a>
+</div>
+<div id="game" class="hidden">
   <div id="scores">
     <div id="scoreA">
       <div class="score-identifier">Score: </div>

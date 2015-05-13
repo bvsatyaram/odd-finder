@@ -1,6 +1,6 @@
 ---
 ---
-Game =
+@Game =
   noCells: 81
   maxTimeWithoutOdd: 10 # This is the max. no. of rotates before an odd appears
   scoreA: 0
@@ -73,6 +73,8 @@ Game =
     $(document).bind 'keyup', 'right', ->
       Game.handlePlayerResponse(2)
   startGame: ->
+    $('#instructions').addClass('hidden')
+    $('#game').removeClass('hidden')
     for i in [1..(Game.noCells)]
       Game.writeToCell(i)
     Game.updateScores()
@@ -82,5 +84,3 @@ Game =
     Game.propagator = window.setInterval((->
       Game.rotateRandomCell()
     ), 500)
-$ ->
-  Game.startGame()
