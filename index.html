@@ -2,22 +2,99 @@
 layout: default
 ---
 
-<div class="home">
-
-  <h1 class="page-heading">Posts</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+<div id="game">
+  <div id="scores">
+    <div id="scoreA">
+      <div class="score-identifier">Score: </div>
+      <div class="score"></div>
+    </div>
+    <div id="scoreB">
+      <div class="score-identifier">Score: </div>
+      <div class="score"></div>
+    </div>
+  </div>
+  <div id="game-grid">
+    <!-- div#game-cell-$.game-cell*36 -->
+    <div id="game-cell-1" class="game-cell"></div>
+    <div id="game-cell-2" class="game-cell"></div>
+    <div id="game-cell-3" class="game-cell"></div>
+    <div id="game-cell-4" class="game-cell"></div>
+    <div id="game-cell-5" class="game-cell"></div>
+    <div id="game-cell-6" class="game-cell"></div>
+    <div id="game-cell-7" class="game-cell"></div>
+    <div id="game-cell-8" class="game-cell"></div>
+    <div id="game-cell-9" class="game-cell"></div>
+    <div id="game-cell-10" class="game-cell"></div>
+    <div id="game-cell-11" class="game-cell"></div>
+    <div id="game-cell-12" class="game-cell"></div>
+    <div id="game-cell-13" class="game-cell"></div>
+    <div id="game-cell-14" class="game-cell"></div>
+    <div id="game-cell-15" class="game-cell"></div>
+    <div id="game-cell-16" class="game-cell"></div>
+    <div id="game-cell-17" class="game-cell"></div>
+    <div id="game-cell-18" class="game-cell"></div>
+    <div id="game-cell-19" class="game-cell"></div>
+    <div id="game-cell-20" class="game-cell"></div>
+    <div id="game-cell-21" class="game-cell"></div>
+    <div id="game-cell-22" class="game-cell"></div>
+    <div id="game-cell-23" class="game-cell"></div>
+    <div id="game-cell-24" class="game-cell"></div>
+    <div id="game-cell-25" class="game-cell"></div>
+    <div id="game-cell-26" class="game-cell"></div>
+    <div id="game-cell-27" class="game-cell"></div>
+    <div id="game-cell-28" class="game-cell"></div>
+    <div id="game-cell-29" class="game-cell"></div>
+    <div id="game-cell-30" class="game-cell"></div>
+    <div id="game-cell-31" class="game-cell"></div>
+    <div id="game-cell-32" class="game-cell"></div>
+    <div id="game-cell-33" class="game-cell"></div>
+    <div id="game-cell-34" class="game-cell"></div>
+    <div id="game-cell-35" class="game-cell"></div>
+    <div id="game-cell-36" class="game-cell"></div>
+    <div id="game-cell-37" class="game-cell"></div>
+    <div id="game-cell-38" class="game-cell"></div>
+    <div id="game-cell-39" class="game-cell"></div>
+    <div id="game-cell-40" class="game-cell"></div>
+    <div id="game-cell-41" class="game-cell"></div>
+    <div id="game-cell-42" class="game-cell"></div>
+    <div id="game-cell-43" class="game-cell"></div>
+    <div id="game-cell-44" class="game-cell"></div>
+    <div id="game-cell-45" class="game-cell"></div>
+    <div id="game-cell-46" class="game-cell"></div>
+    <div id="game-cell-47" class="game-cell"></div>
+    <div id="game-cell-48" class="game-cell"></div>
+    <div id="game-cell-49" class="game-cell"></div>
+    <div id="game-cell-50" class="game-cell"></div>
+    <div id="game-cell-51" class="game-cell"></div>
+    <div id="game-cell-52" class="game-cell"></div>
+    <div id="game-cell-53" class="game-cell"></div>
+    <div id="game-cell-54" class="game-cell"></div>
+    <div id="game-cell-55" class="game-cell"></div>
+    <div id="game-cell-56" class="game-cell"></div>
+    <div id="game-cell-57" class="game-cell"></div>
+    <div id="game-cell-58" class="game-cell"></div>
+    <div id="game-cell-59" class="game-cell"></div>
+    <div id="game-cell-60" class="game-cell"></div>
+    <div id="game-cell-61" class="game-cell"></div>
+    <div id="game-cell-62" class="game-cell"></div>
+    <div id="game-cell-63" class="game-cell"></div>
+    <div id="game-cell-64" class="game-cell"></div>
+    <div id="game-cell-65" class="game-cell"></div>
+    <div id="game-cell-66" class="game-cell"></div>
+    <div id="game-cell-67" class="game-cell"></div>
+    <div id="game-cell-68" class="game-cell"></div>
+    <div id="game-cell-69" class="game-cell"></div>
+    <div id="game-cell-70" class="game-cell"></div>
+    <div id="game-cell-71" class="game-cell"></div>
+    <div id="game-cell-72" class="game-cell"></div>
+    <div id="game-cell-73" class="game-cell"></div>
+    <div id="game-cell-74" class="game-cell"></div>
+    <div id="game-cell-75" class="game-cell"></div>
+    <div id="game-cell-76" class="game-cell"></div>
+    <div id="game-cell-77" class="game-cell"></div>
+    <div id="game-cell-78" class="game-cell"></div>
+    <div id="game-cell-79" class="game-cell"></div>
+    <div id="game-cell-80" class="game-cell"></div>
+    <div id="game-cell-81" class="game-cell"></div>
+  </div>
 </div>
