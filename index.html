@@ -16,7 +16,7 @@ layout: default
     <p>Speed gains more points. So, be quick!</p>
     <p>Wrong choice costs points. So, be careful.</p>
     <p>Good luck!</p>
-    <a href="#" onclick="Game.startGame(); return false;" id="start-game">Start Game</a>
+    <a href="#" onclick="$('#instructions').addClass('hidden'); $('#game').removeClass('hidden'); return false;" id="start-game">Start Game</a>
 </div>
 <div id="game" class="hidden">
   <div id="scores">

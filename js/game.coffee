@@ -1,6 +1,6 @@
 ---
 ---
-@Game =
+Game =
   noCells: 81
   maxTimeWithoutOdd: 10 # This is the max. no. of rotates before an odd appears
   scoreA: 0
@@ -26,9 +26,10 @@
     $('#game-cell-'+i).html(Game.randomEmoticon(odd))
   rotateRandomCell: ->
     if Game.cyclesLeftForOdd == 1
-      removeOddCell(Game.oddCell)
-      Game.oddCell = null
+      Game.removeOddCell(Game.oddCell)
     else
+      if Game.cyclesLeftForOdd
+        Game.cyclesLeftForOdd--
       cellNo = Math.floor(Math.random()*Game.noCells) + 1
       if !Game.oddCell && Math.floor(Math.random()*Game.maxTimeWithoutOdd) == Math.floor(Game.maxTimeWithoutOdd/2)
         Game.setOddCell(cellNo)
@@ -67,14 +68,11 @@
     else
       Game.addScore(player, -Game.penaltyForWrongAnswer)
   watchHotKeys: ->
-    console.log 'Watching Keys'
     $(document).bind 'keyup', 'ctrl', ->
       Game.handlePlayerResponse(1)
     $(document).bind 'keyup', 'right', ->
       Game.handlePlayerResponse(2)
   startGame: ->
-    $('#instructions').addClass('hidden')
-    $('#game').removeClass('hidden')
     for i in [1..(Game.noCells)]
       Game.writeToCell(i)
     Game.updateScores()
@@ -84,3 +82,5 @@
     Game.propagator = window.setInterval((->
       Game.rotateRandomCell()
     ), 500)
+$ ->
+  Game.startGame()
